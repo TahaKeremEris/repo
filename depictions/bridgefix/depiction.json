@@ -1,0 +1,37 @@
+{
+  "minVersion": "0.1",
+  "class": "DepictionTabView",
+  "headerImage": "",
+  "tintColor": "#ff3b30",
+  "tabs": [
+    {
+      "tabname": "Details",
+      "class": "DepictionStackView",
+      "views": [
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "Stops the **iOS 15 Watch app** from crashing during Apple Watch setup when you pair a watch on a newer watchOS (e.g. watchOS 11) with a pairing tweak such as **Legizmo**.\n\n**Symptom it fixes:** after pairing, tapping *Continue* closes the Watch app, and reopening it shows *\"Apple Watch is being unpaired\"*. The crash log mentions `BPSRemoteUISetupStyle applyToObjectModel:`.\n\nSome setup pages (like Activation Lock) are sent by Apple's servers. On iOS 15 the old code calls a method that no longer matches those pages and the app crashes. BridgeFix catches that error so setup can continue. A page may look slightly unstyled.\n\n**BridgeFix does not unlock pairing by itself.** You still need a pairing tweak."
+        },
+        { "class": "DepictionSeparatorView" },
+        { "class": "DepictionHeaderView", "title": "Tested on" },
+        { "class": "DepictionTableTextView", "title": "iPhone", "text": "iPhone 13, iOS 15.1.1" },
+        { "class": "DepictionTableTextView", "title": "Jailbreak", "text": "Dopamine (rootless)" },
+        { "class": "DepictionTableTextView", "title": "Watch", "text": "Series 10, watchOS 11.5" },
+        { "class": "DepictionTableTextView", "title": "Pairing tweak", "text": "Legizmo Moonstone 6.3" },
+        { "class": "DepictionSeparatorView" },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "**Tip:** if you used another pairing tweak before, it may have left fake values in `/var/mobile/Library/Preferences/com.apple.NanoRegistry.plist` and `com.apple.pairedsync.plist` (for example `activityTimeout = 30`). Remove leftovers that your current pairing tweak does not use."
+        }
+      ]
+    },
+    {
+      "tabname": "Changelog",
+      "class": "DepictionStackView",
+      "views": [
+        { "class": "DepictionSubheaderView", "title": "1.2" },
+        { "class": "DepictionMarkdownView", "markdown": "First public release." }
+      ]
+    }
+  ]
+}

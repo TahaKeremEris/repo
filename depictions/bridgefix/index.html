@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BridgeFix</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font: 16px/1.5 -apple-system, system-ui, sans-serif; max-width: 640px; margin: 0 auto; padding: 16px; }
+  h1 { font-size: 24px; margin: 0 0 4px; }
+  .sub { opacity: .7; margin: 0 0 16px; }
+  code { font-size: 14px; }
+  table { border-collapse: collapse; width: 100%; }
+  td { padding: 6px 0; border-bottom: 1px solid rgba(128,128,128,.25); }
+  td:first-child { opacity: .7; width: 40%; }
+</style>
+</head>
+<body>
+<h1>BridgeFix</h1>
+<p class="sub">Version 1.2 · iOS 15 · rootless</p>
+
+<p>Stops the <b>iOS 15 Watch app</b> from crashing during Apple Watch setup when you pair a
+watch on a newer watchOS (e.g. watchOS 11) with a pairing tweak such as <b>Legizmo</b>.</p>
+
+<p><b>Symptom it fixes:</b> after pairing, tapping <i>Continue</i> closes the Watch app, and reopening it
+shows <i>"Apple Watch is being unpaired"</i>. The crash log mentions
+<code>BPSRemoteUISetupStyle applyToObjectModel:</code>.</p>
+
+<p>Some setup pages (like Activation Lock) are sent by Apple's servers. On iOS 15 the old code calls
+a method that no longer matches those pages and the app crashes. BridgeFix catches that error so
+setup can continue. A page may look slightly unstyled.</p>
+
+<p><b>BridgeFix does not unlock pairing by itself.</b> You still need a pairing tweak.</p>
+
+<h2>Tested on</h2>
+<table>
+  <tr><td>iPhone</td><td>iPhone 13, iOS 15.1.1</td></tr>
+  <tr><td>Jailbreak</td><td>Dopamine (rootless)</td></tr>
+  <tr><td>Watch</td><td>Series 10, watchOS 11.5</td></tr>
+  <tr><td>Pairing tweak</td><td>Legizmo Moonstone 6.3</td></tr>
+</table>
+
+<h2>Changelog</h2>
+<p><b>1.2</b> · First public release.</p>
+</body>
+</html>

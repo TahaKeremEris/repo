@@ -1,0 +1,24 @@
+Origin: Taha Kerem's Repo
+Label: Taha Kerem's Repo
+Suite: stable
+Version: 1.0
+Codename: ios
+Architectures: iphoneos-arm iphoneos-arm64
+Components: main
+Description: Tweaks by Taha Kerem
+Date: Mon, 23 Nov 2026 14:06:08 UTC
+MD5Sum:
+ 8df2f0b6528ddce383d2bd333c2f801d 805 Packages
+ 509aeb5be37a3f280dff0de6d3a4b778 485 Packages.gz
+ df80a63af489cdd1fea7e3929dbe6026 565 Packages.bz2
+ b217df7dc1c237329036769159e20601 552 Packages.xz
+SHA1:
+ 76a04320822f1e88165c563f91ac0b42904a27b0 805 Packages
+ f17c8f795c247ab62a76358b65cc94a1e80678b1 485 Packages.gz
+ 1528945e81e6f513fe1d7ee089957a713fe3d28c 565 Packages.bz2
+ 8f3e4ca8ba0585852501feb93eec27e877a19f9f 552 Packages.xz
+SHA256:
+ e47018198c180e0edf60f2e1f57665169a90cd3f0d3410aae0fdf57f18441bec 805 Packages
+ a53f2004e297de294cb752e0119ad2c320b8c41031dc1c615d7fdb0dbd8d7622 485 Packages.gz
+ 72afc4603a749ac9b11441cec2f9f177886db8409d46734bfdee5a80650e9182 565 Packages.bz2
+ 67cf119b257a89acfc7a20a9151053a9e1ee7e75bd05305e584eefb3aab944a3 552 Packages.xz
