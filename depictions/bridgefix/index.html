@@ -26,9 +26,11 @@ watch on a newer watchOS (e.g. watchOS 11) with a pairing tweak such as <b>Legiz
 shows <i>"Apple Watch is being unpaired"</i>. The crash log mentions
 <code>BPSRemoteUISetupStyle applyToObjectModel:</code>.</p>
 
-<p>Some setup pages (like Activation Lock) are sent by Apple's servers. On iOS 15 the old code calls
-a method that no longer matches those pages and the app crashes. BridgeFix catches that error so
-setup can continue. A page may look slightly unstyled.</p>
+<p>Some setup pages are sent by Apple's servers. The one that breaks is the online
+<b>Terms and Conditions</b> page shown right after activation. It now contains a modern web view
+(<code>WKWebView</code>), but iOS 15's styling code still calls an old <code>UIWebView</code> method on it
+(<code>stringByEvaluatingJavaScriptFromString:</code>), and the app crashes. BridgeFix catches that
+error so setup can continue. The Terms page may look slightly unstyled.</p>
 
 <p><b>BridgeFix does not unlock pairing by itself.</b> You still need a pairing tweak.</p>
 
