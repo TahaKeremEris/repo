@@ -22,6 +22,12 @@
         {
           "class": "DepictionMarkdownView",
           "markdown": "**Tip:** if you used another pairing tweak before, it may have left fake values in `/var/mobile/Library/Preferences/com.apple.NanoRegistry.plist` and `com.apple.pairedsync.plist` (for example `activityTimeout = 30`). Remove leftovers that your current pairing tweak does not use."
+        },
+        { "class": "DepictionSeparatorView" },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Source code (MIT)",
+          "action": "https://github.com/TahaKeremEris/BridgeFix"
         }
       ]
     },
